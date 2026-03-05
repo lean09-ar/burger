@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PEAKY BURGERS</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+
+
+
+<header class="header">
+    <div class="logo">PEAKY BLINDERS</div>
+
+    <nav class="nav">
+        <a href="#inicio">Inicio</a>
+        <a href="#menu">Menú</a>
+        <a href="https://wa.me/542646728026" target="_blank">Contacto</a>
+    </nav>
+
+
+</header>
+
+
+
+<div class="cart-panel" id="cart-panel">
+    <div class="cart-header">
+        <h3>Tu Pedido</h3>
+        <span onclick="toggleCart()">✖</span>
+    </div>
+
+    <ul id="cart-items"></ul>
+
+    <p>Total: $<span id="total">0</span></p>
+
+    <button class="btn-primary" onclick="sendWhatsApp()">Enviar pedido</button>
+    <button class="btn-secondary" onclick="clearCart()">Vaciar carrito</button>
+</div>
+
+
+
+<section class="hero" id="inicio">
+    <div class="hero-content">
+        <h1>Hamburguesas Peaky</h1>
+        <p>Calidad premium · Ingredientes reales · Sabor único</p>
+        <a href="#menu" class="btn">Ver menú</a>
+    </div>
+</section>
+
+
+
+<section class="menu" id="menu">
+    <h2 class="titulo-menu">Nuestro Menú</h2>
+
+    <div class="products">
+
+        <div class="product card">
+            <img src="pk3.jpg"class="product-img">
+            <h3>Classic</h3>
+            <p></p>
+            <span>$4500</span>
+            <button onclick="addToCart('Classic', 4500, this)">Agregar</button>
+        </div>
+
+        <div class="product card">
+            <img src="pk4.jpg"class="product-img">
+            <h3>Bacon</h3>
+            <p></p>
+            <span>$5200</span>
+            <button onclick="addToCart('Bacon', 5200, this)">Agregar</button>
+        </div>
+
+
+        <div class="product card">
+            <img src="pk5.jpg"class="product-img">
+            <h3>Bacon</h3>
+            <p></p>
+            <span>$5200</span>
+            <button onclick="addToCart('Bacon', 5200, this)">Agregar</button>
+        </div>
+
+        <div class="product card">
+            <img src="pk6.jpg"class="product-img">
+            <h3>Bacon</h3>
+            <p></p>
+            <span>$5200</span>
+            <button onclick="addToCart('Bacon', 5200, this)">Agregar</button>
+        </div>
+
+    </div>
+</section>
+
+<div class="cart-icon" onclick="toggleCart()">
+    🛒
+    <span id="cart-count">0</span>
+</div>
+
+<footer class="footer">
+    <span>© 2026 Peaky Burgers</span>
+
+    <a href="https://www.instagram.com/peaky_blinders.b?igsh=OWZ2ejR2dnoxZGFj" target="_blank" class="insta-icon">
+        <i class="fab fa-instagram"> ¡seguinos!</i>
+    </a>
+</footer>
+
+<div class="notification" id="notification"></div>
+<script src="script.js"></script>
+
+</body>
+</html>
